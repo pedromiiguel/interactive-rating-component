@@ -1,0 +1,29 @@
+.radio {
+  display: none;
+}
+
+.label {
+  position: relative;
+  color: var(--medium-gray);
+  border-radius: 100%;
+
+  background-color: var(--dark-blue);
+  width: 8px;
+  height: 8px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.label:hover {
+  color: var(--white);
+  background: var(--orange);
+}
+
+.radio:checked + label {
+  color: var(--white);
+  background: var(--medium-gray);
+}
