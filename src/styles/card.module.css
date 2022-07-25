@@ -1,0 +1,15 @@
+.card {
+  background: var(--background-gradient);
+  border-radius: 30px;
+  padding: 32px;
+  width: 380px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}
