@@ -1,13 +1,13 @@
-import React, { FormEvent, InputHTMLAttributes } from 'react';
-import styles from 'styles/option.module.css';
+import React, { FormEvent, InputHTMLAttributes } from 'react'
+import styles from 'styles/option.module.css'
 
 type OptionProps = {
-  onChange: (event: FormEvent) => void;
-  label: string;
-  name: string;
-  id: string;
-  value: string;
-} & InputHTMLAttributes<HTMLInputElement>;
+  onChange: (event: FormEvent) => void
+  label: string
+  name: string
+  id: string
+  value: string
+} & InputHTMLAttributes<HTMLInputElement>
 
 export function Option({
   onChange,
@@ -33,5 +33,5 @@ export function Option({
         {label}
       </label>
     </div>
-  );
+  )
 }
