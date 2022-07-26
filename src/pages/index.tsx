@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import { useState } from 'react'
+import type { NextPage } from 'next'
+import Head from 'next/head'
 
-import { Card } from 'components/Card';
+import { Card } from 'components/Card'
 
-import styles from 'styles/Home.module.css';
-import useStep from 'hooks/useStep';
-import { StepOne } from 'components/Steps/StepOne';
-import { StepTwo } from 'components/Steps/StepTwo';
+import styles from 'styles/Home.module.css'
+import { useStep } from 'hooks/useStep'
+import { StepOne } from 'components/StepOne'
+import { StepTwo } from 'components/StepTwo'
 
 const Home: NextPage = () => {
-  const [feedback, setFeedback] = useState<string | null>(null);
+  const [feedback, setFeedback] = useState<string | null>(null)
 
-  const [currentStep, helpers] = useStep(2);
-  const { goToNextStep } = helpers;
+  const [currentStep, helpers] = useStep(2)
+  const { goToNextStep } = helpers
 
   const options = Array.from({ length: 5 }, (_, index) => {
-    return String(index + 1);
-  });
+    return String(index + 1)
+  })
 
   const getStepContent = (currentStep: number) => {
     switch (currentStep) {
@@ -29,11 +29,11 @@ const Home: NextPage = () => {
             options={options}
             goToNextStep={goToNextStep}
           />
-        );
+        )
       case 2:
-        return <StepTwo feedback={feedback} options={options} />;
+        return <StepTwo feedback={feedback} options={options} />
     }
-  };
+  }
 
   return (
     <div className={styles.container}>
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 
       <Card>{getStepContent(currentStep)}</Card>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
