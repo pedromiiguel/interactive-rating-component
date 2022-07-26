@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import styles from 'styles/stepTwo.module.css';
+import React from 'react'
+import styles from 'styles/stepTwo.module.css'
 
 type StepTwoProps = {
-  feedback: string | null;
-  options: string[];
-};
+  feedback: string | null
+  options: string[]
+}
 
 export function StepTwo({ feedback, options }: StepTwoProps) {
   return (
@@ -20,5 +19,5 @@ export function StepTwo({ feedback, options }: StepTwoProps) {
         more support, don’t hesitate to get in touch!
       </p>
     </div>
-  );
+  )
 }
